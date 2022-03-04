@@ -1,12 +1,7 @@
-import React from "react"
+import React from "react";
 
 function Contact() {
-    return(
-    <li>
-        fname lname
-    </li>
-    )
+  return <li>fname lname</li>;
 }
 
 export default Contact;
-
