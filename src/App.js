@@ -19,7 +19,7 @@ function App() {
           Learn React
         </a>
         <ul>
-        <Contact></Contact>
+            <Contact></Contact>
         </ul>
       </header>
     </div>
