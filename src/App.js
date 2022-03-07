@@ -1,15 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
 import Contact from './components/contact';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 function App() {
 
+    const [users,setUsers] = useState([])
+
     useEffect(() => {
         //fetch(process.env.REACT_APP_BACKEND_URL+'contacts')
-        fetch('https://contactapp-jgalobart.netlify.app/contacts')
+        fetch('https://jgalobart-todo2.herokuapp.com/contacts')
             .then((response) => response.json())
-            .then((json)=>console.log(json))
+            .then((json)=>setUsers(json))
     }, []);
     
 
@@ -29,7 +31,10 @@ function App() {
             Learn React
             </a>
             <ul>
-                <Contact></Contact>
+                {console.log(users)}
+                {users.map((user)=>(
+                    <Contact fname={user.fname} lname={user.lname}></Contact>
+                ))}
             </ul>
         </header>
         </div>

@@ -1,9 +1,9 @@
 import React from "react"
 
-function Contact() {
+function Contact(props) {
     return(
     <li>
-        fname lname
+        {props.fname} {props.lname}
     </li>
     )
 }
