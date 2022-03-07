@@ -6,7 +6,8 @@ import { useEffect } from 'react';
 function App() {
 
     useEffect(() => {
-        fetch(process.env.REACT_APP_BACKEND_URL+'contacts')
+        //fetch(process.env.REACT_APP_BACKEND_URL+'contacts')
+        fetch('https://contactapp-jgalobart.netlify.app/contacts')
             .then((response) => response.json())
             .then((json)=>console.log(json))
     }, []);
