@@ -3,7 +3,7 @@ import React from "react"
 function Contact(props) {
     return(
     <li>
-        <strong>{props.fname}</strong> {props.lname}
+        <strong>{props.fname}</strong> <em>{props.lname}</em>
     </li>
     )
 }
