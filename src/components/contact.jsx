@@ -3,7 +3,7 @@ import React from "react"
 function Contact() {
     return(
     <li>
-        fname lname
+        <strong>fname</strong> <em>lname</em>
     </li>
     )
 }
